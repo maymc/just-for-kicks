@@ -8,10 +8,34 @@ function alertBox(){
 
 //2. Add an event to the div element with the id of 'name1' that will show/hide the description ('descrip1') after hovering over Air Jordan II.
 
+var name1Elem = document.getElementById("name1");
+name1Elem.addEventListener('mouseover', showHide);
+
+function showHide(){
+    var descrip1Elem = document.getElementById("descrip1");
+
+    if(descrip1Elem.style.display === "none"){
+        descrip1Elem.style.display = "block";
+    }
+    else{
+        descrip1Elem.style.display = "none";
+    }
+}
+
 
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
 
+var name2Elem = document.getElementById("name2");
+
+name2Elem.addEventListener("click", showDescrip);
+
+function showDescrip(){
+    var descrip2Elem = document.createElement("div");
+    descrip2Elem.id = "descrip2";
+    descrip2Elem.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.";
+    name2Elem.appendChild(descrip2Elem);
+}
 
 //You'll need to:
 // create a div element with an id of 'descrip2'
