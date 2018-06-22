@@ -64,7 +64,7 @@ function thumbsUp(){
 }
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
-    //getElem(price4
+//getElem(price4
 //get("increase"))
 //click on increase
 
@@ -91,7 +91,18 @@ function increment(){
 
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan V shoe each time the icon is clicked on.
+var decreaseElem = document.getElementById("decrease");
+decreaseElem.addEventListener("click", decrement);
 
+var price5Elem = document.getElementById("price5");
+var price5Str = price5Elem.innerHTML.slice(0,4);
+var price5Num = Number(price5Str);
+
+function decrement(){
+    price5Num = price5Num - 1;
+    price5Elem.innerHTML = price5Num;
+    price5Elem.appendChild(decreaseElem);
+}
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
 
