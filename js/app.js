@@ -27,14 +27,20 @@ function showHide(){
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
 
 var name2Elem = document.getElementById("name2");
-
 name2Elem.addEventListener("click", showDescrip);
 
+var descrip2Elem = document.createElement("div");
+descrip2Elem.id = "descrip2";
+descrip2Elem.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.";
+name2Elem.appendChild(descrip2Elem);
+
 function showDescrip(){
-    var descrip2Elem = document.createElement("div");
-    descrip2Elem.id = "descrip2";
-    descrip2Elem.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.";
-    name2Elem.appendChild(descrip2Elem);
+    if(descrip2Elem.style.display === "none"){
+        descrip2Elem.style.display = "block";
+    }
+    else{
+        descrip2Elem.style.display = "none";
+    }
 }
 
 //You'll need to:
