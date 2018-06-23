@@ -105,19 +105,18 @@ function decrement(){
 }
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
-// var AirJordanXIElem = document.getElementsByClassName("block3 col-sm-4");
-// AirJordanXIElem[1].addEventListener("mouseover", colorway);
+var AJ11 = document.getElementsByClassName("block3 col-sm-4");
+var AJ11Image = AJ11[1].childNodes[0];
 
-// function colorway(){
-//     var imgElem = document.createElement("img");
-//     imgElem.src = "https://cdn.thesolesupplier.co.uk/2017/09/Jordan-11-GS-Night-Maroon.png";
-//     AirJordanXIElem.appendChild(imgElem);
-// }
+AJ11Image.addEventListener("mouseover", colorway);
+
+function colorway(){
+    AJ11Image.src = "https://cdn.thesolesupplier.co.uk/2017/09/Jordan-11-GS-Night-Maroon.png";
+}
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
 var AJ12 = document.getElementsByClassName("block1 col-sm-4");
 var AJ12Image = AJ12[2].childNodes[0];
-AJ12Image.id = "AJ12Img";
 
 AJ12Image.addEventListener('click', imgIncrease);
 
