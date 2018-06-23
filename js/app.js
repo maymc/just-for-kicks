@@ -105,9 +105,26 @@ function decrement(){
 }
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
+// var AirJordanXIElem = document.getElementsByClassName("block3 col-sm-4");
+// AirJordanXIElem[1].addEventListener("mouseover", colorway);
 
+// function colorway(){
+//     var imgElem = document.createElement("img");
+//     imgElem.src = "https://cdn.thesolesupplier.co.uk/2017/09/Jordan-11-GS-Night-Maroon.png";
+//     AirJordanXIElem.appendChild(imgElem);
+// }
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+var AJ12 = document.getElementsByClassName("block1 col-sm-4");
+var AJ12Image = AJ12[2].childNodes[0];
+AJ12Image.id = "AJ12Img";
+
+AJ12Image.addEventListener('click', imgIncrease);
+
+function imgIncrease(){
+    AJ12Image.style.height = "375px";
+    AJ12Image.style.width = "375px";
+}
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
