@@ -130,8 +130,8 @@ function imgIncrease(){
 var oneUpElem = document.getElementById("oneUp");
 oneUpElem.addEventListener("click", addOne);
 
-// var oneDownElem = document.getElementById("oneDown");
-// oneDownElem.addEventListener("click", subtractOne);
+var oneDownElem = document.getElementById("oneDown");
+oneDownElem.addEventListener("click", subtractOne);
 
 var price8Elem = document.getElementById("price8");
 var price8Str = price8Elem.innerHTML.slice(0,4);
@@ -141,12 +141,14 @@ function addOne(){
     price8Num = price8Num + 1;
     price8Elem.innerHTML = price8Num;
     price8Elem.appendChild(oneUpElem);
+    price8Elem.appendChild(oneDownElem);
 }
-// function subtractOne(){
-//     price8Num = price8Num - 1;
-//     price8.innerHTML = price8Num;
-//     price8.appendChild(oneDownElem);
-// }
+function subtractOne(){
+    price8Num = price8Num - 1;
+    price8Elem.innerHTML = price8Num;
+    price8Elem.appendChild(oneUpElem);
+    price8Elem.appendChild(oneDownElem);
+}
 
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
