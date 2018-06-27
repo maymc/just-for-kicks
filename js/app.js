@@ -127,4 +127,38 @@ function imgIncrease(){
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
+var oneUpElem = document.getElementById("oneUp");
+oneUpElem.addEventListener("click", addOne);
+
+// var oneDownElem = document.getElementById("oneDown");
+// oneDownElem.addEventListener("click", subtractOne);
+
+var price8Elem = document.getElementById("price8");
+var price8Str = price8Elem.innerHTML.slice(0,4);
+var price8Num = Number(price8Str);
+
+function addOne(){
+    price8Num = price8Num + 1;
+    price8Elem.innerHTML = price8Num;
+    price8Elem.appendChild(oneUpElem);
+}
+// function subtractOne(){
+//     price8Num = price8Num - 1;
+//     price8.innerHTML = price8Num;
+//     price8.appendChild(oneDownElem);
+// }
+
+
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+
+var AJ28 = document.getElementsByClassName("block3 col-sm-4");
+var AJ28Image = AJ11[2].childNodes[0];
+
+AJ28Image.addEventListener("click", michaelJordan);
+
+function michaelJordan(){
+    AJ28Image.src = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Michael_Jordan_crying.jpg/220px-Michael_Jordan_crying.jpg";
+}
+
+
+
